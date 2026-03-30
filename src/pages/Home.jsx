@@ -4,12 +4,9 @@ import appsData from "../data/appsData.js";
 import AppCard from "../components/AppCard.jsx";
 import Loader from "../components/Loader.jsx";
 import { formatDownloads } from "../utils.js";
+import Banner from "../assets/hero.png";
 
-const FLOAT_ICONS = ["📱", "⚡", "🎯", "🔥", "✅", "🚀"];
-const FLOAT_CLASSES = [
-  "animate-float-1", "animate-float-2", "animate-float-3",
-  "animate-float-4", "animate-float-5", "animate-float-6",
-];
+
 
 export default function Home() {
   const navigate = useNavigate();
@@ -79,14 +76,7 @@ export default function Home() {
 
           {/* Floating icons */}
           <div className="flex justify-center gap-3 flex-wrap">
-            {FLOAT_ICONS.map((icon, i) => (
-              <div
-                key={i}
-                className={`w-14 h-14 rounded-2xl bg-base-200 border border-violet-500/20 flex items-center justify-center text-2xl shadow-lg shadow-violet-500/10 ${FLOAT_CLASSES[i]}`}
-              >
-                {icon}
-              </div>
-            ))}
+            <img src={Banner} alt="Hero Banner" />
           </div>
         </div>
       </section>
@@ -94,7 +84,7 @@ export default function Home() {
       {/* ── Stats ── */}
       <section className="border-y border-violet-500/20 bg-gradient-to-r from-violet-500/5 to-cyan-500/5 py-16">
         <div className="max-w-6xl mx-auto px-6">
-          <p className="text-center text-xs font-bold uppercase tracking-widest text-base-content/40 mb-10">
+          <p className="text-center font-extrabold text-3xl md:text-5xl lg:text-6xl gradient-text mb-10">
             Trusted By Millions, Built For You
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
