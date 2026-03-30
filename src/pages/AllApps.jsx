@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import appsData from "../data/appsData.js";
 import AppCard from "../components/AppCard.jsx";
 import Loader from "../components/Loader.jsx";
+import AppError from "../assets/App-Error.png";
 
 export default function AllApps() {
   const [search, setSearch] = useState("");
@@ -84,7 +85,7 @@ export default function AllApps() {
         <Loader />
       ) : filtered.length === 0 ? (
         <div className="flex flex-col items-center justify-center py-24 gap-4">
-          <div className="text-7xl">🔍</div>
+           <img src={AppError} alt="No App Found" />
           <h3 className="font-syne font-bold text-2xl text-base-content">No App Found</h3>
           <p className="text-base-content/40 text-sm">Try a different search keyword</p>
           <button onClick={() => setSearch("")} className="btn btn-primary btn-sm mt-2">

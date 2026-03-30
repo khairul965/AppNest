@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import Logo from '../assets/logo.png';
 
 export default function Footer() {
   return (
@@ -7,11 +8,9 @@ export default function Footer() {
         {/* Brand */}
         <div className="flex flex-col gap-4 lg:col-span-1">
           <Link to="/" className="flex items-center gap-2">
-            <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-violet-600 to-cyan-500 flex items-center justify-center">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
-                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke="white" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" />
-              </svg>
-            </div>
+            <figure>
+               <img src={Logo} alt="AppNest Logo" className="w-10 h-10" />
+             </figure>
             <span className="font-syne font-extrabold text-xl text-base-content">AppNest</span>
           </Link>
           <p className="text-sm text-base-content/50 max-w-xs leading-relaxed">

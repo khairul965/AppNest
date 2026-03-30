@@ -1,4 +1,6 @@
 import { useNavigate } from "react-router-dom";
+import Error from "../assets/error-404.png";
+import AppError from "../assets/App-Error.png";
 
 export default function NotFound() {
   const navigate = useNavigate();
@@ -12,7 +14,7 @@ export default function NotFound() {
         </span>
         <div className="absolute inset-0 flex items-center justify-center">
           <img
-            src="https://img.icons8.com/fluency/120/cancel.png"
+            src={Error}
             alt="404"
             className="w-24 md:w-32 animate-float-1 drop-shadow-2xl"
           />
