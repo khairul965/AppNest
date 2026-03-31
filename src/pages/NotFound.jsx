@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import Error from "../assets/error-404.png";
-import AppError from "../assets/App-Error.png";
+
 
 export default function NotFound() {
   const navigate = useNavigate();
